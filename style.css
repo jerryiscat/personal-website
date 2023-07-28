@@ -104,6 +104,10 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
+.about-col-2 a{
+    color:#cb5774;
+}
+
 .sub-title{
     font-size: 46px;
     font-weight: 600;
