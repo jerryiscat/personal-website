@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, HashRouter} from 'react-router-dom';
 import Header from './components/Header/Header'
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
@@ -10,9 +10,8 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Header />
-
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />
@@ -21,9 +20,8 @@ function App() {
         <Route path="/fun" element={<Fun />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      
       <Footer />
-    </Router>
+    </HashRouter>
   );
 }
 

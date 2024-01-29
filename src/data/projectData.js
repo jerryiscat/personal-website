@@ -18,7 +18,7 @@ export const projectsData = [
     {
         id: 2,
         name: 'MusicMatch',
-        desc: 'A music data-driven music social media website utilizing Spotify API to access user listening habits, empowered by OpenAI API to generalize music personality and match music buddies!',
+        desc: 'A music data-driven music social media website, empowered by OpenAI API to generalize music personality and match music buddies!',
         image: musicMatch,
         demo: 'https://github.com/jerryiscat/music-match/blob/main/README.md', 
         code: 'https://github.com/jerryiscat/music-match/blob/main/README.md', 
