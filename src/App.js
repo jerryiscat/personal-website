@@ -12,6 +12,7 @@ function App() {
   return (
     <HashRouter>
       <Header />
+      {/* <ScrollToTop/> */}
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />
@@ -21,7 +22,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      {/* <BackToTop /> */}
     </HashRouter>
+    
   );
 }
 

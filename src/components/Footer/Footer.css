@@ -8,6 +8,10 @@
     margin-bottom: 0;
 }
 
+.footer .contact-link {
+    text-decoration: none;
+}
+
 .footer .footer-contact-container {
     display: flex;
     align-items: center; 
@@ -42,6 +46,11 @@
     font-weight: 600;
     padding: 5px 10px;
     justify-content: center; 
+}
+
+.footer .contact-btn:hover {
+    color:#cb5774;
+    transform: translateY(-3px);
 }
 
 .footer .contact-btn i {
