@@ -15,7 +15,7 @@ function Contact() {
                         <a href="https://www.linkedin.com/in/jasmine-zhang-a37500233/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/jerryiscat"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="img/resume_jasmineZhang.pdf" download class="btn btn2">Download Resume</a>
+                    <a href="https://drive.google.com/file/d/1eDx6QIO7iAEht1u__OEgjj6FP3A5r_8S/view?usp=sharing" download class="btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
