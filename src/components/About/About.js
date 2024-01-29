@@ -3,10 +3,10 @@ import './About.css'; // Assuming you have a CSS file for styles
 import landPage from '../../images/jasland-landpage.png';
 import profileImage from '../../images/me.jpeg';
 import { NavLink } from 'react-router-dom';
-import Education from '../../components/Education/Education.js';
-import Skills from '../../components/Skills/Skills.js';
-import Contact from '../../components/Contact/Contact.js';
-import { aboutData } from '../../data/aboutData';
+import Education from '../Education/Education.js';
+import Skills from '../Skills/Skills.js';
+import Contact from '../Contact/Contact.js';
+import { aboutData } from '../../data/aboutData.js';
 
 
 
