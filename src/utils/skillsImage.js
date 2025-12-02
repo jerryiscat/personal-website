@@ -227,7 +227,42 @@ export const skillsImage = (skill) => {
             return wolframalpha;
         case 'canva':
             return canva;
+        case 'express.js':
+        case 'express':
+            return javascript; // Using javascript as fallback for Express.js
+        case 'node.js':
+        case 'nodejs':
+        case 'node':
+            return javascript; // Using javascript as fallback for Node.js
+        case 'react native':
+            return react; // Using React icon for React Native
+        case 'vue.js':
+        case 'vuejs':
+            return vue;
+        case 'swiftui':
+        case 'swift ui':
+            return swift; // Using Swift icon for SwiftUI
+        case 'ios':
+            return swift; // Using Swift icon for iOS
+        case 'spotify api':
+            return null; // No icon available
+        case 'openai api':
+        case 'openai':
+            return null; // No icon available
+        case 'web audio api':
+            return null; // No icon available
+        case 'raylib':
+            return null; // No icon available
+        case 'webassembly':
+        case 'wasm':
+            return null; // No icon available
+        case 'android':
+            return null; // No icon available
+        case 'mobile':
+            return null; // No icon available
+        case 'audio':
+            return null; // No icon available
         default:
-            break;
+            return null;
     }
 }

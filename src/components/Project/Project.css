@@ -22,16 +22,31 @@
   
   .work-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 40px;
       margin-top: 50px;
+  }
+
+  .work-list > div {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .work-list > div h2 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+  }
+
+  .work-list > div {
+      margin-bottom: 20px;
   }
   
   .work{
       border-radius: 10px;
       position: relative;
       overflow: hidden;
-      height: 80%;
+      height: 300px;
+      width: 100%;
   }
   
   .work img{
@@ -166,5 +181,17 @@
 
   .layer::-webkit-scrollbar-thumb:hover {
       background: #a04a5f;
+  }
+
+  @media screen and (max-width: 1200px) {
+      .work-list {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      .work-list {
+          grid-template-columns: 1fr;
+      }
   }
   

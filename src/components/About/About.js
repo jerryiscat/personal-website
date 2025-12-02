@@ -19,7 +19,7 @@ function About() {
             </div>
 
             <div class="header-text">
-                <p>Software Development Engineer</p>
+                {/* <p>Software Development Engineer</p> */}
                 <h1>Hi, I am <span>Jasmine</span> Zhang.</h1>
             </div>
 
@@ -29,7 +29,12 @@ function About() {
                 </div>
                 <div class="about-col-2 intro">
                     <h1 class="sub-title">{aboutData.title}</h1>
-                    <p>{aboutData.description1}<br/><br/>{aboutData.description2}<br/><br/>{aboutData.description3}</p>
+                    <p>{aboutData.description1}<br/><br/>{aboutData.description2}{aboutData.description3 && <><br/><br/>{aboutData.description3}</>}</p>
+                    <div class="intro-buttons">
+                        <NavLink to="/experience" className="intro-btn">Experience</NavLink>
+                        <NavLink to="/project" className="intro-btn">Projects</NavLink>
+                        <NavLink to="/contact" className="intro-btn">Contact</NavLink>
+                    </div>
 
                     {/* <div class="tab-titles">
                         <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>

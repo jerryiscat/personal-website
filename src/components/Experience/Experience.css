@@ -6,14 +6,15 @@
 }
 
 .experience-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-top: 50px;
 }
 
 .experience-list p, .experience-list ul{
-    line-height: 1.2rem;
+    line-height: 1.6rem;
+    font-size: 16px;
 }
 
 
@@ -21,15 +22,17 @@
     background: #b95870;
     color: white;
     padding: 40px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
 
-.experience-list div i{
+.experience-icon{
     font-size: 50px;
-    margin-bottom:30px ;
+    margin-bottom: 30px;
+    display: block;
+    line-height: 1;
 }
 
 
@@ -47,16 +50,8 @@
     transform: translateY(-10px);
 }
 
-@media only screen and (max-width: 1440px){
-
-    .experience-list{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media only screen and (max-width: 768px){
-
     .experience-list{
-        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
     }
 }

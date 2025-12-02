@@ -89,20 +89,20 @@ function Hobby() {
     },
     {
       id: 2,
-      title: "The Pianist",
-      year: 2002,
-      description: "A biographical drama about a Polish Jewish pianist during World War II.",
+      title: "La La Land",
+      year: 2016,
+      description: "A romantic musical about dreams and love in Los Angeles.",
       music: "https://www.youtube.com/watch?v=example2",
-      musicName: "The Pianist Soundtrack",
+      musicName: "City of Stars - Justin Hurwitz",
       poster_path: null // Will be fetched from TMDb
     },
     {
       id: 3,
-      title: "Robot Dreams",
-      year: 2023,
-      description: "An animated film about friendship between a dog and a robot in 1980s New York.",
+      title: "Inception",
+      year: 2010,
+      description: "A mind-bending thriller about dreams within dreams.",
       music: "https://www.youtube.com/watch?v=example3",
-      musicName: "Robot Dreams Soundtrack",
+      musicName: "Time - Hans Zimmer",
       poster_path: null // Will be fetched from TMDb
     }
   ]);
@@ -1025,16 +1025,6 @@ function Hobby() {
                       setShowDropdown(false);
                     }
                   }}
-                  onKeyDown={(e) => {
-                    // Allow all key events including backspace and delete
-                    // Don't prevent default for any keys
-                    if (e.key === 'Enter') {
-                      e.preventDefault();
-                      if (searchQuery.trim()) {
-                        searchMovies(searchQuery);
-                      }
-                    }
-                  }}
                   onFocus={() => {
                     if (searchQuery.trim() && searchResults.length > 0) {
                       setShowDropdown(true);
@@ -1218,7 +1208,7 @@ function Hobby() {
         </section>
 
         {/* Cooking Section */}
-        {/* <section className="hobby-section cooking-section">
+        <section className="hobby-section cooking-section">
           <h2 className="section-title">
             <FaUtensils className="section-icon" />
             My Cooking Creations
@@ -1272,7 +1262,7 @@ function Hobby() {
               </div>
             ))}
           </div>
-        </section> */}
+        </section>
       </div>
 
       {/* Bottom Fixed Spotify Player */}

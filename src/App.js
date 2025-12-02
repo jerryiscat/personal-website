@@ -9,12 +9,13 @@ import Fun from './components/Fun/Fun';
 import Hobby from './components/Hobby/Hobby';
 import Footer from './components/Footer/Footer';
 import GameViewer from './components/GameViewer/GameViewer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <HashRouter>
       <Header />
-      {/* <ScrollToTop/> */}
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />

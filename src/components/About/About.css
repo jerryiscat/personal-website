@@ -12,6 +12,32 @@
 #about .intro p {
     font-size: 1.2rem;
     line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.intro-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #cb5774, #b95870);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.intro-btn:hover {
+    background: linear-gradient(135deg, #b95870, #a04a5f);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(203, 87, 116, 0.3);
 }
 
 .header-text {
@@ -61,7 +87,7 @@
     flex-basis: 60%;
 }
 
-.about-col-2 a{
+.about-col-2 a:not(.intro-btn){
     color:#cb5774;
 }
 

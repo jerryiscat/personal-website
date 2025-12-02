@@ -11,14 +11,52 @@ function Experience() {
             <div className="experience-list">
                 {experienceData.map((exp, index) => (
                     <div key={index}>
-                        <i className="fa-solid fa-book-open-reader"></i>
+                        <span className="experience-icon">{exp.icon || "📋"}</span>
                         <h2>{exp.title}</h2>
                         <p><em><b>{exp.institution}, {exp.duration}</b></em></p>
                         <br/>
                         <ul>
-                            {exp.responsibilities.map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                            ))}
+                            {exp.responsibilities.map((item, idx) => {
+                                // Check if this is the first item (publication) and exp has a publicationLink
+                                if (idx === 0 && exp.publicationLink) {
+                                    // Make the entire publication sentence clickable without showing the URL
+                                    return (
+                                        <li key={idx}>
+                                            <a 
+                                                href={exp.publicationLink} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                style={{ color: '#fff', textDecoration: 'underline' }}
+                                            >
+                                                {item}
+                                            </a>
+                                        </li>
+                                    );
+                                }
+                                
+                                // Check if the item contains a URL
+                                const urlRegex = /(https?:\/\/[^\s]+)/g;
+                                const urlMatch = item.match(urlRegex);
+                                
+                                if (urlMatch) {
+                                    // If URL found, make the entire sentence clickable
+                                    return (
+                                        <li key={idx}>
+                                            <a 
+                                                href={urlMatch[0]} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                style={{ color: '#fff', textDecoration: 'underline' }}
+                                            >
+                                                {item}
+                                            </a>
+                                        </li>
+                                    );
+                                }
+                                
+                                // If no URL, render normally
+                                return <li key={idx}>{item}</li>;
+                            })}
                         </ul>
                     </div>
                 ))}

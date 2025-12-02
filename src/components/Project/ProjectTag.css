@@ -1,0 +1,36 @@
+.project-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.project-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.tag-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.tag-name {
+    font-weight: 500;
+}
+
+.project-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
