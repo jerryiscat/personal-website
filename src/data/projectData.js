@@ -3,6 +3,8 @@ import hearNatureImage from '../images/project/hear-nature.png';
 import clearClick from '../images/project/clear-click.png';
 import musicMatch from '../images/project/music-match.png';
 import websiteHub from '../images/project/website-hub.png';
+import cellularAutomataGameImage from '../images/project/cellular-automata-game.png';
+import cellularAutomataGameGif from '../images/project/cellular-automata-game.gif';
 
 
 export const projectsData = [
@@ -50,6 +52,33 @@ export const projectsData = [
         demo: 'https://github.com/jerryiscat/HearNature', // Replace with actual URL if available
         code: 'https://github.com/jerryiscat/HearNature',
         tags: ['Java', 'Android', 'Audio']
+    },
+    {
+        id: 6,
+        name: 'Cellular-Automata-Game',
+        desc: 'A puzzle game where you guide water and other elements through obstacles to fill containers.',
+        image: cellularAutomataGameImage,
+        gif: cellularAutomataGameGif,
+        demo: '#/game/cellular-automata',
+        code: 'https://github.com/jerryiscat/Cellular-Automata-Game',
+        tags: ['C', 'raylib', 'WebAssembly'],
+        features: [
+            '4 Levels with increasing difficulty and unique mechanics',
+            'Multiple Elements: Walls, Sand, Fire, Water (blue and red)',
+            'Plant System: Blue water grows plants, red water destroys them (creates ash)',
+            'Physics Simulation: Real-time particle interactions and gravity',
+            'Save/Load: Binary serialization to save your progress',
+        ],
+        controls: [
+            'Mouse Left Click: Draw/place elements',
+            '1 Key: Wall',
+            '2 Key: Sand (Level 2+)',
+            '3 Key: Fire (Level 3+)',
+            'R Key: Restart current level',
+            'F5: Save game',
+            'F9: Load game',
+            'Click ON/OFF Button: Start/stop water flow'
+        ]
     },
     // {
     //     id: 3,

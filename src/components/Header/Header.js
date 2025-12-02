@@ -15,6 +15,7 @@ function Header() {
                   <NavLink to='/'className="nav-link">About</NavLink>
                   <NavLink to='/experience'className="nav-link">Experience</NavLink>
                   <NavLink to='/project'className="nav-link">Projects</NavLink>
+                  <NavLink to='/hobby'className="nav-link">Hobby</NavLink>
                   {/* <NavLink to='/fun' className="nav-link">
                     Fun <FontAwesomeIcon icon={faHeart} />
                   </NavLink> */}

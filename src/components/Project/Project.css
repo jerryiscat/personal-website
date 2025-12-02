@@ -87,4 +87,84 @@
   .work:hover .layer{
       height: 100%;
   }
+
+  .project-gif-container {
+      margin: 15px 0;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+  }
+
+  .project-gif {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+  }
+
+  .project-features,
+  .project-controls {
+      margin: 15px 0;
+      text-align: left;
+      width: 100%;
+  }
+
+  .project-features h3,
+  .project-controls h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #420D1A;
+  }
+
+  .project-features ul,
+  .project-controls ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+  }
+
+  .project-features li,
+  .project-controls li {
+      margin: 5px 0;
+      padding-left: 15px;
+      position: relative;
+      color: #666;
+  }
+
+  .project-features li:before,
+  .project-controls li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #b95870;
+      font-weight: bold;
+  }
+
+  .layer {
+      overflow-y: auto;
+      max-height: 100%;
+  }
+
+  .layer::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  .layer::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+  }
+
+  .layer::-webkit-scrollbar-thumb {
+      background: #b95870;
+      border-radius: 3px;
+  }
+
+  .layer::-webkit-scrollbar-thumb:hover {
+      background: #a04a5f;
+  }
   

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetroView TV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Limelight&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+      /* Custom CRT Scanline Effect */
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.2) 50%,
+          rgba(0,0,0,0.2)
+        );
+        background-size: 100% 4px;
+        animation: scrollScanlines 10s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes scrollScanlines {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 100%; }
+      }
+      
+      /* Static Noise Animation */
+      .static-noise {
+        position: relative;
+        overflow: hidden;
+      }
+      .static-noise::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.4"/%3E%3C/svg%3E');
+        animation: noiseAnimation 0.2s infinite;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      @keyframes noiseAnimation {
+        0% { transform: translate(0, 0); }
+        10% { transform: translate(-5%, -5%); }
+        20% { transform: translate(-10%, 5%); }
+        30% { transform: translate(5%, -10%); }
+        40% { transform: translate(-5%, 15%); }
+        50% { transform: translate(-10%, 5%); }
+        60% { transform: translate(15%, 0); }
+        70% { transform: translate(0, 10%); }
+        80% { transform: translate(-15%, 0); }
+        90% { transform: translate(10%, 5%); }
+        100% { transform: translate(5%, 0); }
+      }
+
+      /* Glow Effects */
+      .screen-glow {
+        box-shadow: inset 0 0 60px rgba(0,0,0,0.7), 0 0 20px rgba(100, 255, 100, 0.1);
+      }
+      
+      /* Retro Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2d2d2d; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #555; 
+        border-radius: 4px;
+      }
+      
+      /* Sticky Note Tape */
+      .tape {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        position: absolute;
+        top: -10px;
+        left: 35%;
+        width: 30%;
+        height: 20px;
+        transform: rotate(-2deg);
+        backdrop-filter: blur(1px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
