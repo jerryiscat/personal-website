@@ -5,6 +5,7 @@ import musicMatch from '../images/project/music-match.png';
 import websiteHub from '../images/project/website-hub.png';
 import cellularAutomataGameImage from '../images/project/cellular-automata-game.png';
 import cellularAutomataGameGif from '../images/project/cellular-automata-game.gif';
+import plantBuddyImage from '../images/project/plant-buddy.png';
 
 
 export const projectsData = [
@@ -48,7 +49,7 @@ export const projectsData = [
         id: 3,
         name: 'PlantBuddy',
         desc: 'An iOS app for plant care tracking built with SwiftUI and MVVM, featuring a Django/PostgreSQL backend with local caching and offline support.',
-        image: hearNatureImage, // Using placeholder image for now
+        image: plantBuddyImage,
         demo: 'https://github.com/jerryiscat/plantbuddy',
         code: 'https://github.com/jerryiscat/plantbuddy',
         tags: ['Swift', 'SwiftUI', 'Django', 'PostgreSQL', 'iOS']
