@@ -6,7 +6,7 @@ import Experience from './components/Experience/Experience';
 import Project from './components/Project/Project';
 import Contact from './components/Contact/Contact';
 import Fun from './components/Fun/Fun';
-import Hobby from './components/Hobby/Hobby';
+import Playground from './components/Playground/Playground';
 import Footer from './components/Footer/Footer';
 import GameViewer from './components/GameViewer/GameViewer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -22,7 +22,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/project" element={<Project />} />
         <Route path="/fun" element={<Fun />} />
-        <Route path="/hobby" element={<Hobby />} />
+        <Route path="/playground" element={<Playground />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/game/:gameName" element={<GameViewer />} />
       </Routes>

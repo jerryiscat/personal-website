@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Hobby.css';
+import './Playground.css';
 import { FaMusic, FaUtensils, FaSearch, FaSpinner, FaChevronLeft, FaChevronRight, FaExternalLinkAlt, FaTimes, FaEllipsisH } from 'react-icons/fa';
+import RetroViewTV from './RetroViewTV';
 
-function Hobby() {
+function Playground() {
   const [selectedDish, setSelectedDish] = useState(null);
   
   // TMDb API states
@@ -89,20 +90,20 @@ function Hobby() {
     },
     {
       id: 2,
-      title: "La La Land",
-      year: 2016,
-      description: "A romantic musical about dreams and love in Los Angeles.",
+      title: "Robot Dreams",
+      year: 2023,
+      description: "A heartwarming animated film about friendship between a dog and a robot in 1980s New York.",
       music: "https://www.youtube.com/watch?v=example2",
-      musicName: "City of Stars - Justin Hurwitz",
+      musicName: "Soundtrack",
       poster_path: null // Will be fetched from TMDb
     },
     {
       id: 3,
-      title: "Inception",
-      year: 2010,
-      description: "A mind-bending thriller about dreams within dreams.",
+      title: "Pulp Fiction",
+      year: 1994,
+      description: "A nonlinear crime film following interconnected stories of Los Angeles mobsters, small-time criminals, and a mysterious briefcase.",
       music: "https://www.youtube.com/watch?v=example3",
-      musicName: "Time - Hans Zimmer",
+      musicName: "Soundtrack",
       poster_path: null // Will be fetched from TMDb
     }
   ]);
@@ -519,8 +520,8 @@ function Hobby() {
     try {
       // First, try to find in our manual mapping (for quick access)
       const soundtrackMap = {
-        'La La Land': '1mea3bSkSGXuIRvnydlB5b',
-        'Inception': '2aQITvrlT8QzJZws8Z4NiO',
+        'Robot Dreams': '1mea3bSkSGXuIRvnydlB5b',
+        'Pulp Fiction': '2aQITvrlT8QzJZws8Z4NiO',
         'Interstellar': '3BSP2FQu8rSIeWHnKeUvm8',
         'The Dark Knight': '5fVFB9uH9rupb4GXeUeIQ9',
         'The Grand Budapest Hotel': '4V4n0z1xi9L0Q1fqj1qj1q',
@@ -923,9 +924,32 @@ function Hobby() {
   };
 
   return (
-    <div id="hobby">
+    <div id="playground">
       <div className="container">
-        <h1 className="sub-title">My Hobbies <i className="fa-solid fa-heart"></i></h1>
+        <h1 className="sub-title">Playground <i className="fa-solid fa-heart"></i></h1>
+
+        {/* RetroView TV Section */}
+        <section className="hobby-section">
+          <h2 className="section-title">
+            <FaMusic className="section-icon" />
+            RetroView TV
+          </h2>
+          <p className="section-description">
+            A retro-style movie recommendation app with vintage TV aesthetics
+          </p>
+          <RetroViewTV 
+            onPlaySoundtrack={handleMusicToggle}
+            searchSpotifyTracks={searchSpotifyTracks}
+            soundtrackCache={soundtrackCache}
+            normalizeTrack={normalizeTrack}
+            getTrackUrl={getTrackUrl}
+            isCacheExpired={isCacheExpired}
+            cleanExpiredCache={cleanExpiredCache}
+            CACHE_EXPIRY_TIME={CACHE_EXPIRY_TIME}
+            playingMusicId={playingMusicId}
+            currentTrackUrl={currentTrackUrl}
+          />
+        </section>
 
         {/* Movie Recommendation Section */}
         <section className="hobby-section">
@@ -1003,7 +1027,7 @@ function Hobby() {
                 <input
                   type="text"
                   className={`movie-search-input ${showDropdown && searchResults.length > 0 ? 'dropdown-open' : ''}`}
-                  placeholder="Enter a movie name (e.g., Inception, The Matrix, La La Land)..."
+                  placeholder="Enter a movie name (e.g., Pulp Fiction, The Matrix, Robot Dreams)..."
                   value={searchQuery}
                   ref={searchInputRef}
                   onChange={(e) => {
@@ -1208,7 +1232,7 @@ function Hobby() {
         </section>
 
         {/* Cooking Section */}
-        <section className="hobby-section cooking-section">
+        {/* <section className="hobby-section cooking-section">
           <h2 className="section-title">
             <FaUtensils className="section-icon" />
             My Cooking Creations
@@ -1262,7 +1286,7 @@ function Hobby() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* Bottom Fixed Spotify Player */}
@@ -1456,5 +1480,5 @@ function Hobby() {
   );
 }
 
-export default Hobby;
+export default Playground;
 

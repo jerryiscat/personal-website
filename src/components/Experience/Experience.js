@@ -1,15 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Experience.css'; // Assuming you have a CSS file for styles
 import { experienceData } from '../../data/ExperienceData'
 
+const categories = [
+  { id: 'all', label: 'All' },
+  { id: 'professional', label: 'Professional Experience' },
+  { id: 'research', label: 'Research' },
+  { id: 'community', label: 'Community' },
+  { id: 'other', label: 'Other' },
+];
 
 function Experience() {
+  const [activeTab, setActiveTab] = useState('all');
+
+  const filteredExperiences = activeTab === 'all' 
+    ? experienceData 
+    : experienceData.filter(exp => exp.category === activeTab);
+
   return (
     <div id="experience">
         <div className="container">
             <h1 className="sub-title">Experience</h1>
+            
+            {/* Tabs */}
+            <div className="experience-tabs">
+              {categories.map(category => (
+                <button
+                  key={category.id}
+                  className={`experience-tab ${activeTab === category.id ? 'active' : ''}`}
+                  onClick={() => setActiveTab(category.id)}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+
             <div className="experience-list">
-                {experienceData.map((exp, index) => (
+                {filteredExperiences.map((exp, index) => (
                     <div key={index}>
                         <span className="experience-icon">{exp.icon || "📋"}</span>
                         <h2>{exp.title}</h2>

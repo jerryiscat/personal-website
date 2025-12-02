@@ -5,6 +5,53 @@
     margin-bottom: 60px;
 }
 
+/* Experience Tabs */
+.experience-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.experience-tab {
+    padding: 10px 20px;
+    background: rgba(203, 87, 116, 0.1);
+    border: 2px solid rgba(203, 87, 116, 0.3);
+    border-radius: 25px;
+    color: #420D1A;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.experience-tab:hover {
+    background: rgba(203, 87, 116, 0.2);
+    border-color: rgba(203, 87, 116, 0.5);
+    transform: translateY(-2px);
+}
+
+.experience-tab.active {
+    background: linear-gradient(135deg, #cb5774, #b95870);
+    border-color: #cb5774;
+    color: white;
+    box-shadow: 0 4px 12px rgba(203, 87, 116, 0.3);
+}
+
+@media only screen and (max-width: 768px){
+    .experience-tabs {
+        gap: 8px;
+    }
+    
+    .experience-tab {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
 .experience-list{
     display: flex;
     flex-direction: column;

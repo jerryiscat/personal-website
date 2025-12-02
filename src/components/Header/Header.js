@@ -3,7 +3,7 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 import whiteLogo from '../../images/white-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMusic } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
                   <NavLink to='/'className="nav-link">About</NavLink>
                   <NavLink to='/experience'className="nav-link">Experience</NavLink>
                   <NavLink to='/project'className="nav-link">Projects</NavLink>
-                  <NavLink to='/hobby'className="nav-link">Hobby</NavLink>
+                  <NavLink to='/playground'className="nav-link">Playground <FontAwesomeIcon icon={faMusic} /></NavLink>
                   {/* <NavLink to='/fun' className="nav-link">
                     Fun <FontAwesomeIcon icon={faHeart} />
                   </NavLink> */}

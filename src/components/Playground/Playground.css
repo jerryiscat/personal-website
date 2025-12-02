@@ -1,5 +1,5 @@
-/*------------hobby-----------*/
-#hobby {
+/*------------playground-----------*/
+#playground {
     padding: 50px 0;
     min-height: 100vh;
     background: #FFF3F3;
@@ -7,17 +7,39 @@
     padding-bottom: 180px; /* Space for bottom player + track info */
 }
 
-#hobby .sub-title {
+#playground .sub-title {
     color: #cb5774;
     margin-top: 30px;
     margin-bottom: 40px;
     text-align: center;
 }
 
-#hobby .sub-title i {
+#playground .sub-title i {
     color: #cb5774;
     font-size: 2.5rem;
     margin-left: 15px;
+}
+
+.retroview-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.retroview-iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .retroview-iframe {
+        height: 600px;
+    }
 }
 
 .hobby-section {
@@ -1434,7 +1456,7 @@
         font-size: 1.4rem;
     }
 
-    #hobby .sub-title {
+    #playground .sub-title {
         font-size: 2rem;
     }
 
